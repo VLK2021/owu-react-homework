@@ -1,0 +1,8 @@
+.comentClas {
+    width: 18%;
+    border: 1px solid blue;
+    text-align: center;
+    margin-top: 2px;
+    padding: 1px;
+    box-sizing: border-box;
+}
