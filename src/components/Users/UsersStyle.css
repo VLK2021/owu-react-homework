@@ -1,0 +1,26 @@
+.wraper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2px;
+    color: midnightblue;
+    background: gainsboro;
+}
+
+.users-wrap, .one-user {
+    width: 49%;
+    border: 1px solid black;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.posts-wrap {
+    width: 98%;
+    border: 1px solid black;
+    margin-top: 2px;
+    text-align: center;
+}

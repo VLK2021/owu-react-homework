@@ -1,0 +1,14 @@
+.user-wrap {
+    width: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 130px;
+    color: brown;
+    margin-left: 10px;
+    background: lemonchiffon;
+}
