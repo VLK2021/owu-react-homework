@@ -1,0 +1,7 @@
+.posts {
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 2px;
+    text-align: center;
+    font-weight: bold;
+}
