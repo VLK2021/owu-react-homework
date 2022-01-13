@@ -6,7 +6,6 @@ import './UsersStyle.css';
 import UserDetails from "../UserDetails/UserDetails";
 import Posts from "../Posts/Posts";
 
-
 const Users = () => {
     const [usersList, setUsersList] = useState([]);
     const [user, setUser] = useState();
@@ -14,23 +13,17 @@ const Users = () => {
 
     useEffect(() => {
         usersServise.getAll()
-            .then(users =>
-                setUsersList(users)
-            )
-    });
-
+            .then(users => setUsersList(users))});
 
     const getById = (id) => {
         fetch('https://jsonplaceholder.typicode.com/users/' + id)
             .then(response => response.json())
-            .then(value => setUser(value))
-    }
+            .then(value => setUser(value))};
 
     const getPosts = (id) => {
         fetch('https://jsonplaceholder.typicode.com/users/' + id + '/posts')
             .then(response => response.json())
-            .then(posts => setPost(posts))
-    }
+            .then(posts => setPost(posts))};
 
     return (
         <div className="wraper">
