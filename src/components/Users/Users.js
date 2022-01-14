@@ -13,7 +13,7 @@ const Users = () => {
 
     useEffect(() => {
         usersServise.getAll()
-            .then(users => setUsersList(users))});
+            .then(users => setUsersList(users))}, []);
 
     const getById = (id) => {
         fetch('https://jsonplaceholder.typicode.com/users/' + id)
