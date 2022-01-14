@@ -1,0 +1,8 @@
+.userStyle {
+    width: 500px;
+    border: 1px solid black;
+    padding: 1px;
+    box-sizing: border-box;
+    margin: 3px;
+    font-weight: bold;
+}
