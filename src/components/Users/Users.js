@@ -35,21 +35,16 @@ const Users = () => {
         setFilteredUsers(filterArr)
     }
 
-
     return (
         <div>
-            <Form
-                getFilter={getFilter}
-            />
+            <Form getFilter={getFilter}/>
 
             {
-                user.map(value => <User
+                filteredUsers.map(value => <User
                     key={value.id}
-                    item={value}
+                    user={value}
                 />)
             }
-
-
         </div>
     );
 };
