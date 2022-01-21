@@ -1,0 +1,11 @@
+.UserPostOne {
+    background: white;
+    font-weight: bold;
+    color: blue;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
+    box-sizing: border-box;
+}

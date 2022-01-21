@@ -1,0 +1,11 @@
+.SinglePostPage {
+    text-align: center;
+    margin-left: 50px;
+}
+
+.commentsBtn {
+    width: 400px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}

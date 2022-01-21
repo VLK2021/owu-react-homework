@@ -1,0 +1,12 @@
+.postsPage{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    color: black;
+}
+
+.postsPage-block{
+    min-width: 400px;
+}
