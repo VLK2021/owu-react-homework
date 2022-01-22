@@ -5,4 +5,15 @@
     border-radius: 5px;
     padding: 2px;
     box-sizing: border-box;
+    font-weight: bold;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.userBtn{
+    font-weight: bold;
+    color: blue;
+    background: white;
+    margin-left: 15px;
 }

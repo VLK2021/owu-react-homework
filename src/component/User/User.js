@@ -7,7 +7,10 @@ const User = ({user}) => {
     const {id, name, username} = user;
     return (
         <div className="user">
-            <Link to={id.toString()}>{id}) {name} {username}</Link>
+            <div>{id}) {name} {username}</div>
+            <Link to={id.toString()}><button className={'userBtn'}>User details</button></Link>
+            <Link to={id.toString()}><button className={'userBtn'}>Alboms</button></Link>
+
         </div>
     );
 };

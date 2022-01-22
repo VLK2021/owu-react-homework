@@ -5,10 +5,9 @@ import {postsService} from "../../services/posts.service";
 import PostDetails from "../../component/PostDetails/PostDetails";
 import './SinglePostPageStyle.css';
 
-const SinglePostPage = ({setPostComments}) => {
+const SinglePostPage = () => {
 
     const {id} = useParams();
-
     const [post, setPost] = useState(null)
 
     useEffect(() => {
@@ -16,16 +15,11 @@ const SinglePostPage = ({setPostComments}) => {
     }, [id]);
 
 
-    useEffect(() => {
-        postsService.getComments(id).then(value => setPostComments([...value]))
-    }, [id, setPostComments]);
-
-
     return (
         <div className="SinglePostPage">
             <div>{post && <PostDetails key={post.id} post={post}/>}</div>
 
-            <Link to={'comments'}>
+            <Link to={'comments'} state={{id}}>
                 <button className="commentsBtn">Comments</button>
             </Link>
 
