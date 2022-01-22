@@ -23,8 +23,6 @@ const PostsPage = () => {
 
             <div><Outlet/></div>
         </div>
-
-
     );
 };
 

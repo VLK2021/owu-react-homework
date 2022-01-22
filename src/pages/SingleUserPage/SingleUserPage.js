@@ -5,26 +5,21 @@ import {userService} from "../../services/user.service";
 import UserDetails from "../../component/UserDetails/UserDetails";
 import './SingleUserPageStyle.css';
 
-const SingleUserPage = ({setUserPosts}) => {
-    const {id} = useParams()
 
+const SingleUserPage = () => {
+
+    const {id} = useParams()
     const [user, setUser] = useState(null);
 
     useEffect(() => {
         userService.getById(id).then(value => setUser({...value}))
     }, [id]);
 
-
-    useEffect(() => {
-        userService.getPosts(id).then(value => setUserPosts([...value]));
-    }, [id, setUserPosts]);
-
-
     return (
         <div>
             <div>{user && <UserDetails key={user.id} user={user}/>}</div>
 
-            <Link to={'posts'}>
+            <Link to={'posts'} state={{id}}>
                 <button className="postsBtn">Posts</button>
             </Link>
 
