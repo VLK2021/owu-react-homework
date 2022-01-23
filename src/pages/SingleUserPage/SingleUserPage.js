@@ -14,7 +14,6 @@ const SingleUserPage = () => {
         userService.getById(id).then(value => setUser({...value}))
     }, [id]);
 
-
     return (
         <div>
             <div>{user && <UserDetails key={user.id} user={user}/>}</div>

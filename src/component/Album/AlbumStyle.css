@@ -1,0 +1,17 @@
+.album{
+    min-width: 40%;
+    margin-bottom: 10px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-align: center;
+}
+
+.photosBtn{
+    width: 90%;
+    color: blue;
+    font-weight: bold;
+}

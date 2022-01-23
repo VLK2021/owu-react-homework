@@ -2,6 +2,7 @@ import React from 'react';
 
 import './UserDetailsStyle.css'
 
+
 const UserDetails = ({user}) => {
 
     const {
