@@ -1,0 +1,40 @@
+.header{
+    width: 100%;
+    min-height: 70px;
+}
+
+.header-top{
+    width: 100%;
+    height: 40px;
+    background: deepskyblue;
+    color: blue;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+
+.header-top a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-bottum{
+    width: 100%;
+    height: 80px;
+    background: gainsboro;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-bottum-text{
+    font-size: 30px;
+    color: black;
+}
+
+.header-bottum-text a{
+    text-decoration: none;
+}

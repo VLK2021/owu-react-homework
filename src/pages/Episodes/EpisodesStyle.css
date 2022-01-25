@@ -1,0 +1,26 @@
+.episodes {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wrapEpisodes{
+    text-align: center;
+}
+
+.episodes-buttons{
+    margin-top: 15px;
+}
+
+.episodes-buttons > button {
+    height: 30px;
+    color: midnightblue;
+    font-weight: bold;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
