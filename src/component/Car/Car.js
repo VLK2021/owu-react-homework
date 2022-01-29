@@ -2,7 +2,7 @@ import React from 'react';
 
 import './CarStyle.css';
 import {useDispatch} from "react-redux";
-import {dellCar} from "../../store";
+import {deleteCarThunk} from "../../store";
 
 const Car = ({car:{id, model, price, year}}) => {
 
@@ -15,7 +15,7 @@ const Car = ({car:{id, model, price, year}}) => {
                 <div>Price: {price}</div>
                 <div>Year: {year}</div>
             </div>
-            <button onClick={()=>dispatch(dellCar({id}))}>delete</button>
+            <button onClick={()=>dispatch(deleteCarThunk({id}))}>delete</button>
         </div>
     );
 };
