@@ -1,0 +1,9 @@
+.comment {
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: bisque;
+    padding: 2px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}

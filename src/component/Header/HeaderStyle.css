@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: gainsboro;
+    color: midnightblue;
+    text-align: center;
+}
+
+.start {
+    margin-left: 200px;
+}
