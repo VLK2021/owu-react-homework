@@ -1,6 +1,6 @@
 import {axiosService} from "./axios.service";
-import {urls} from "../config/urls";
+import {urls} from "../config";
 
-export const CharacterService = {
-    getAllCharacter: () => axiosService.get(urls.character).then(value => value.data)
+export  const characterService = {
+    getCharactersByIds:(ids)=> axiosService.get(`${urls.character}/${ids}`).then(value => value.data)
 }

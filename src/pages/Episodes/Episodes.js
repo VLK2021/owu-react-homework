@@ -1,34 +1,46 @@
 import React, {useEffect, useState} from 'react';
+import {useSearchParams} from "react-router-dom";
 
-import {episodeService} from "../../services/episode.service";
-import Episod from "../../compponents/Episod/Episod";
+import {episodesService} from "../../services";
+import Episode from "../../component/Episode/Episode";
 import './EpisodesStyle.css'
-import {Link, Outlet, useParams} from "react-router-dom";
+import Paginator from "../../component/Paginator/Paginator";
 
 
 const Episodes = () => {
 
+    const [searchParams, setSearchParams] = useSearchParams();
     const [episodes, setEpisodes] = useState([]);
+    const [info, setInfo] = useState({});
+
 
     useEffect(() => {
-        episodeService.getAllEpisode().then(value => setEpisodes({...value}));
-    }, []);
+        if (!searchParams.get('page')) {
+            setSearchParams({page: '1'})
+        }
 
-    console.log(episodes);
+        const page = searchParams.get('page');
+
+        episodesService.getAll(page).then(value => {
+            setEpisodes([...value.results])
+            setInfo({...value.info})
+
+        })
+
+    }, [searchParams]);
 
     return (
-        <div className="wrapEpisodes">
-            <div className="episodes">
-                {
-                    episodes.results &&  episodes.results.map(episod => <Episod key={episod.id} episod={episod}/>)
-                }
+        <div>
+            <div className="items">
+                {episodes.map(episode => <Episode key={episode.id} episode={episode}/>)}
             </div>
 
-            <Outlet/>
+            <div className="paginator">
+                <Paginator info={info}/>
+            </div>
 
 
         </div>
-
     );
 };
 
