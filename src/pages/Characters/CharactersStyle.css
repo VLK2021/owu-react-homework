@@ -1,0 +1,12 @@
+.characters{
+    text-align: center;
+}
+
+.characters-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    gap: 5px;
+}
