@@ -1,10 +1,15 @@
 import './App.css';
+import Form from "./conponents/Form/Form";
+import Todos from "./conponents/Todos/Todos";
 
-function App() {
+
+const App = () => {
+
     return (
-        <>
-            g
-        </>
+        <div className="app">
+            <Form/>
+            <Todos/>
+        </div>
     );
 }
 
