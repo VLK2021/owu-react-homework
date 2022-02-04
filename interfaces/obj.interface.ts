@@ -2,7 +2,7 @@ export interface ISpaceX {
     mission_name: string,
     launch_date_local: string,
     launch_site: {
-        site_name_long: string
+        site_name_long: string,
     },
     links: ILinks,
     rocket: {
@@ -18,7 +18,7 @@ export interface ISpaceX {
 
 interface ILinks {
     article_link: null,
-    video_link: string
+    video_link: string,
 }
 
 interface ISecond_stage {
@@ -26,7 +26,7 @@ interface ISecond_stage {
         {
             payload_type: string,
             payload_mass_kg: number,
-            payload_mass_lbs: number
+            payload_mass_lbs: number,
         }
     ]
 }
@@ -35,6 +35,6 @@ interface ICores {
     flight: number,
     core: {
         reuse_count: number,
-        status?: string
+        status?: string,
     }
 }
