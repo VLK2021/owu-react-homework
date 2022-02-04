@@ -1,3 +1,5 @@
+import {IUser} from "./interfaces/user.interface";
+
 // 2) протипизировать функции:
 
 //     const user = {
@@ -6,20 +8,18 @@
 //         gender:'male'
 //     }
 
-const user:{
-    name:string,
-    age:number,
-    gender:string
-} = {name: 'Max', age: 18, gender: 'male'};
+const user: IUser = {name: 'Max', age: 18, gender: 'male'};
+console.log(user);
 
 /////////////////////////////////////////////////////////////////////////////////
 // function sum(a,b){
 //     return a+b
 // }
 
-function sum(a: number, b: number) {
+function sum(a: number, b: number): number {
     return a + b;
 }
+
 console.log(sum(1, 2));
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -27,10 +27,10 @@ console.log(sum(1, 2));
 //     console.log(a + b);
 // }
 
-function showSum(a:number, b:number){
-    return a+b;
+function showSum(a: number, b: number): void {
+console.log(a + b);
 }
-showSum(2,3);
+showSum(25, 32);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // function incAge(someUser, inc){
@@ -40,11 +40,12 @@ showSum(2,3);
 
 
 
-// function incAge(someUser:string, inc:number){
-//     someUser.age+=inc
-//     return someUser
-// }
-// incAge(user, 20)
+function incAge(user: IUser, inc: number): IUser {
+    user.age += inc;
+    return user;
+}
+incAge(user, 20);
+console.log(incAge(user, 20));
 
 
 
