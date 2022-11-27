@@ -1,20 +1,26 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 import './App.css';
 
 function App() {
-
     const [current, setCurrent] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
 
-    const increment = () => {
-       setCurrent(current + 1);
-    }
 
-    const decrement = () => {
-        setCurrent(current - 1);
-    }
+    useEffect(() => {
+        if (!isVisible) {
+            return;
+        }
+        let timerId = setInterval(() => {
+            setCurrent((current)=> current+1);
+        }, 1000);
+        return () => {
+            clearInterval(timerId);
+        }
+    }, [isVisible]);
 
     const reset = () => {
+      setIsVisible(false);
       setCurrent(0);
     }
 
@@ -23,8 +29,10 @@ function App() {
         <>
             <div>
                 <div>{current}</div>
-                <button onClick={increment}>increment</button>
-                <button onClick={decrement}>decrement</button>
+                <button onClick={() => {
+                    setIsVisible((prev)=>!prev)
+                }}>{isVisible ? 'Stop' : 'Start'}</button>
+
                 <button onClick={reset}>reset</button>
             </div>
         </>
